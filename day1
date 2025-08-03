@@ -1,0 +1,39 @@
+day 1 learning 
+
+class DemoClass <T> {
+    // Defining a generic method to print any data type
+    void genericPrint(T item) {
+        System.out.println(item);
+    }
+}
+
+//public class gg {
+//    public static void main(String[] args) {
+//
+//
+//        DemoClass aObj = new  DemoClass();
+//
+//        aObj.genericPrint(101);            // Calling generic method with int argument
+//        aObj.genericPrint("Joy with Java");// Calling generic method with String
+//        aObj.genericPrint(3.1412343);
+//    }
+//}
+public class gg {
+    public static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        Integer[] arr = {99, 66};
+        System.out.println("Before swap: arr[0] = " + arr[0] + " arr[1] = " + arr[1]);
+
+        swap(arr, 0, 1);
+
+        System.out.println("After swap: arr[0] = " + arr[0] + " arr[1] = " + arr[1]);
+    }
+}
+
+
+// i get to know about generic and i learned  how to create a swap method in generic 
