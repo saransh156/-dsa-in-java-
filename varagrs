@@ -1,0 +1,55 @@
+// // learning about varargs which is variable arguments in java
+// public class varargs {
+//     public static void main(String[] args) {
+//         // Example of using varargs
+//         printNumbers(1, 2, 3, 4, 5);
+//         printNumbers(10, 20);
+//         printNumbers(); // No arguments
+//     }
+
+//     // Method that accepts variable number of integer arguments
+//     static void printNumbers(int... numbers) {
+//         if (numbers.length == 0) {
+//             System.out.println("No numbers provided.");
+//             return;
+//         }
+//         int sum = 0;
+//         for(int number:numbers){
+//             sum+=number;
+//         }
+//         System.out.print(sum);
+//         System.out.println();
+//     }
+// }
+
+import java.util.Scanner;
+
+// learning about varargs which is variable arguments in java
+public class varargs {
+    public static void main(String[] args) {
+        // Example of using varargs
+
+        printNumbers(1, 2, 3, 4, 5);
+      
+    }
+
+    // Method that accepts variable number of integer arguments
+    static int printNumbers(int... numbers) {
+        if (numbers.length == 0) {
+            System.out.println("No numbers provided.");
+            return 0;
+        }
+        int sum = 0, avg;
+        for(int number:numbers){
+            sum+=number;
+        }
+        
+        System.out.print(sum);
+        System.out.println();
+        avg = sum /numbers.length;
+        System.out.print(avg);
+        return 0;
+    }
+}
+
+
